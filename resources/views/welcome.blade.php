@@ -6,7 +6,9 @@
 
         <title>Laravel</title>
 
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <script src="{{ asset('js/imageTreatment.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>        
 
         <!-- Styles -->
         <style>
@@ -26,7 +28,7 @@
                 height: 100vh;
             }
             .home-panel .page-title{
-                margin-top: -45px;
+                margin-top: calc(-45px * 2);
                 margin-bottom: 15px;
             }
             .panel-link{
@@ -55,15 +57,32 @@
             a.panel-link{
                 text-decoration: none;
             }
+            .panel-item{
+                margin: 10px 0px;
+                display: flex;
+            }
         </style>
     </head>
     <body>
         <div class='home-panel' style='width: 100%;'>
             <div class='page-title'> Bem vindo </div>
-            <a href='/list' class='panel-link'> 
-                <img style='width: 20px; height: 20px;' src='{{asset("img/site/icon-list.svg")}}'>
-                <span> Lista </span>
-            </a>
+            <div class='panel-item'>
+                <a href='/list' class='panel-link'> 
+                    <img style='width: 20px; height: 20px;' src='{{asset("img/site/icon-list.svg")}}'>
+                    <span> Lista </span>
+                </a>
+            </div>
+            <div class='panel-item'>
+                <button type="button" class="btn btn-danger">Forms</button>
+                <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href='/forms/add' class="dropdown-item" href="#">Add</a>
+                    <a href='/blade' class="dropdown-item" href="#">Blade</a>
+                    <!-- <div class="dropdown-divider"></div> -->
+                </div>
+            </div>
         <div>
     </body>
 </html>

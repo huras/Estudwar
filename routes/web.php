@@ -16,3 +16,10 @@ Route::get('/', function () {
 });
 
 Route::get('/list', 'ListController@index');
+
+Route::get('/forms/add', function () {
+    return view('forms/add');
+});
+Route::get('/blade', function () {
+    return view('forms/blade');
+});
