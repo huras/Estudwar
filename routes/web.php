@@ -23,3 +23,5 @@ Route::get('/forms/add', function () {
 Route::get('/blade', function () {
     return view('forms/blade');
 });
+
+Route::get('/register_disponiveis', 'TestsController@getRegistersDisponiveis');
